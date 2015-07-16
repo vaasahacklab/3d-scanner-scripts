@@ -1,0 +1,28 @@
+Pi3Dscan - basic listen and send scipt
+
+Written by: Richard Garsthagen - richard@3dmij.nl
+Version 2.0 - 22 November 2014
+
+
+More info: www.pi3dscan.com
+
+Basic instructions:
+- Make sure you have all your raspberry system connected to a network and the IP configuration is done
+
+- Run on every raspberry with a camera the listen_os.py script, you can do this with the command:
+   'python listen_os.py'
+
+- From any one raspberry run the sendcmd_os.py script with providing the options of what the command raspistill should use on every unit.
+   Examples:
+     python sendcmd.py -o test.jpg    -> this will make every raspberry take full automatic a photo and store it as test.jpg
+     python sendcmd.py -ISO 100 -ss 11000 -o test.jpg  --> take photo with ISO 100 an shutter speed of 1/90sec (11000 nanoseconds)
+
+
+After you have takes the images on each raspberry you need to collect the images (ftp, file share, web server)
+
+Now you can use the images to turn them into a 3d model with
+- autodesk 123d catch
+- autodesk recap 360
+- agisoft photoscan
+- visualFSM
+
