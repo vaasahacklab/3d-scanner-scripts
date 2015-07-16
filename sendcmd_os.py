@@ -15,11 +15,11 @@ import IN
 
 MCAST_GRP = '225.1.1.1'
 MCAST_PORT = 3179
+print sys.argv
 
-if len(sys.argv) < 3:
+if len(sys.argv) < 3 and sys.argv[1] != '-1':
   print "Please provide raspistill command options. See raspistill command for details"
 else:
-  print sys.argv[1]
   options = [sys.argv[1]] # Command 1 = Shoot photo
   for a in range(2, len(sys.argv)):
    options.append(sys.argv[a])
